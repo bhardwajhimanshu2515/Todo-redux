@@ -8,6 +8,7 @@ class Todolist extends React.Component {
         super(props);
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
+        this.editContact=this.editContact.bind(this);
          
         this.state = {
           title: '',
@@ -45,7 +46,7 @@ class Todolist extends React.Component {
                         <div id="deadline">{data.deadline}</div>
                     </div>
                     <div id="buttons">
-                        <button>Edit</button>
+                        <button onClick={(e) => this.editContact(e,data, index)}>Edit</button>
                         <button onClick={(e) => this.deleteContact(e, index)}>Delete</button>
                         <button>Complete</button>
                     </div>
@@ -56,6 +57,15 @@ class Todolist extends React.Component {
     
       deleteContact(e, index){
         e.preventDefault();
+        this.props.deleteContact(index);
+      }
+      editContact(e,data, index){
+        e.preventDefault();
+        this.setState({
+          title:data.title,
+          desc:data.desc,
+          deadline:data.deadline
+        });
         this.props.deleteContact(index);
       }
     render() {

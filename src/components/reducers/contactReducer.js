@@ -11,5 +11,6 @@ export default (state = [], action) => {
       return state.filter((data, i) => i !== action.id);
       default:
             return state;
+            
     }
   };
