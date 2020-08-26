@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { connect } from 'react-redux';
 import * as contactAction from './actions/contactAction';
@@ -77,7 +76,7 @@ class Todolist extends React.Component {
                         <input type="text" name="title" value={this.state.title} placeholder="Todo Title" class="forms" onChange={this.handleChange} /><br/>
                         <input type="text" name="desc" value={this.state.desc} placeholder="Todo Description" class="forms" onChange={this.handleChange} /><br/>
                         <input type="date" name="deadline" value={this.state.deadline} placeholder="Todo Deadline" class="forms" onChange={this.handleChange} /><br/>
-                        <input type="submit" value="Add a Task" class="buttonz"></input>
+                        <input type="submit" value="Click To Add Task" class="buttonz"></input>
                     </form>
                 </div>
             </div>

@@ -67,4 +67,5 @@ form{
 #buttons>button{
     text-decoration: none;
     color:black;
+    border-radius: 8px;
 }
